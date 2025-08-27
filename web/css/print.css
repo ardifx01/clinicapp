@@ -1,0 +1,126 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    margin: 0;
+    /* -webkit-print-color-adjust: exact; */
+    box-sizing: border-box;
+}
+
+.print-container {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 10mm 15mm;
+    margin: auto;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    line-height: 1.2;
+    flex-grow: 1;
+}
+
+.patient-info {
+    font-size: 10pt;
+}
+
+.patient-info .label {
+    width: 130px;
+    display: inline-block;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin-bottom: 20px;
+}
+
+.info-table td {
+    padding: 2px;
+    vertical-align: top;
+}
+
+.section-header {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.content-item {
+    padding: 5px 0;
+    line-height: 1.5;
+}
+
+.underline {
+    text-decoration: none;
+}
+
+.radio-label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.risk-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin-top: 2px;
+}
+
+.risk-table,
+.risk-table th,
+.risk-table td {
+    text-indent: 1px;
+    border: 1px solid black;
+    padding: 1px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.notes-box {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 10pt;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes-box .left,
+.notes-box .right {
+    width: 48%;
+}
+
+.notes-box h5 {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.page-break-before {
+    page-break-before: always;
+    margin-top: 20mm;
+}
